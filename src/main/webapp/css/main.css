@@ -1,0 +1,359 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: #16213e;
+    --accent: #00ff88;
+    --accent-dark: #00cc6a;
+    --danger: #ff4444;
+    --muted: #999;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --text: #ffffff;
+    --dark: #111;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.4;
+}
+
+/* ==================== LAYOUT ==================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-header h1 {
+    font-size: 2.2rem;
+    color: var(--accent);
+    margin-bottom: .5rem;
+}
+
+.page-header p {
+    opacity: 0.8;
+}
+
+/* ==================== NAVBAR ==================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+    background: linear-gradient(45deg, #00ff88, #00ccff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    padding: .5rem 1rem;
+    border-radius: 8px;
+    transition: all .2s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.nav-links a.active {
+    background: var(--accent);
+    color: var(--dark);
+    font-weight: 600;
+}
+
+/* ==================== CARDS ==================== */
+.card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+}
+
+/* ==================== BUTTONS ==================== */
+.btn {
+    display: inline-block;
+    padding: .7rem 1.4rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: all .25s;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--dark);
+}
+
+.btn-primary:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--accent);
+}
+
+.btn-secondary:hover {
+    background: rgba(0, 255, 136, 0.15);
+}
+
+.btn-danger {
+    background: var(--danger);
+    color: #fff;
+}
+
+.btn-small {
+    padding: .5rem 1rem;
+    font-size: .9rem;
+}
+
+.inline {
+    display: inline;
+}
+
+/* для form в booking-actions */
+
+/* ==================== FORMS ==================== */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 600;
+}
+
+.form-input,
+.form-select {
+    width: 100%;
+    padding: .75rem;
+    background: rgba(255, 255, 255, 0.05);
+    borderured: 1px solid var(--glass-border);
+    border-radius: 8px;
+    color: var(--text);
+}
+
+.form-input:focus,
+.form-select:focus {
+    border-color: var(--accent);
+    outline: none;
+}
+
+/* ==================== BOOKING LIST ==================== */
+.filter-bar {
+    display: flex;
+    gap: .6rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    padding: .6rem 1.2rem;
+    border: 2px solid transparent;
+    background: transparent;
+    color: var(--text);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all .25s;
+}
+
+.filter-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.filter-btn.active {
+    background: var(--accent);
+    color: var(--dark);
+    border-color: var(--accent);
+}
+
+.bookings-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.booking-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.booking-type {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.booking-price .price-amount {
+    color: var(--accent);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.booking-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.detail-icon {
+    color: var(--accent);
+}
+
+/* статусы */
+.booking-status {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+.status-confirmed {
+    background: rgba(0, 255, 136, 0.2);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+.status-active {
+    background: rgba(0, 204, 255, 0.2);
+    color: #00ccff;
+    border: 1px solid #00ccff;
+}
+
+.status-completed {
+    background: rgba(255, 255, 255, 0.07);
+    color: var(--muted);
+    border: 1px solid var(--muted);
+}
+
+.status-cancelled {
+    background: rgba(255, 68, 68, 0.2);
+    color: var(--danger);
+    border: 1px solid var(--danger);
+}
+
+/* действия в букингах */
+.booking-actions {
+    text-align: right;
+    margin-top: 1rem;
+}
+
+.btn-booking-actions {
+    padding: .6rem 1.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+}
+
+.btn-booking-actions:hover {
+    background: rgba(0, 255, 136, 0.2);
+}
+
+/* ==================== HELPERS ==================== */
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--card-bg);
+    border-radius: 15px;
+    border: 1px solid var(--glass-border);
+}
+
+.msg-error {
+    color: #ff4444;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 10px;
+    background: rgba(255, 68, 68, 0.1);
+    border-radius: 5px;
+    border: 1px solid #ff4444;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/*спинер*/
+.loading-spinner {
+    text-align: center;
+    padding: 4rem;
+    color: var(--accent);
+}
+.loading-spinner i { font-size: 3rem; margin-bottom: 1rem; }
+
+/* ==================== СЕЛЕКТЫ ==================== */
+.form-select {
+    color: var(--text) !important;
+    border: 1px solid var(--glass-border) !important;
+}
+
+.form-select option {
+    background: var(--bg);
+    color: var(--text);
+    padding: 10px;
+}
+
+
+select {
+    color: white !important;
+    border: 1px solid #00ff88 !important;
+    border-radius: 8px !important;
+    padding: 0.75rem !important;
+}
+
+select option {
+    background: #16213e;
+    color: white;
+    padding: 10px;
+}

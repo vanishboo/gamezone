@@ -1,0 +1,152 @@
+p {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.rooms-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.room-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    max-width: 800px;
+
+}
+
+.room-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.room-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00ff88;
+}
+
+.room-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #00ff88;
+}
+
+.room-description {
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+
+.computers-list {
+    margin-top: 1.5rem;
+}
+
+.computer-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.computer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.computer-id {
+    font-weight: bold;
+    color: #00ff88;
+    font-size: 1.1rem;
+}
+
+.computer-specs {
+    margin-bottom: 1rem;
+}
+
+.spec-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.spec-icon {
+    color: #00ff88;
+    width: 16px;
+    text-align: center;
+}
+
+
+.book-btn {
+    padding: 0.7rem 2rem;
+    background: #00ff88;
+    color: #1a1a2e;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.book-btn:hover {
+    background: #00cc6a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
+}
+
+
+
+
+.computer-games {
+    margin-top: 10px;
+}
+.games-btn {
+    display: flex;
+    color: #00ff88;
+    cursor: pointer;
+}
+
+.buttong-games-icon {
+    font-size: 20px;
+    margin-left: 0.3rem;
+    transition: transform 0.2s ease;
+}
+
+.игра {
+    color: #cacfd3;
+    font-size: 15px;
+}
+
+.games-list {
+    display: none;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 0.6rem 0;
+    width: 100%;
+}
+
+.games-list.show {
+    display: flex;
+}
