@@ -7,8 +7,6 @@
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![Maven](https://img.shields.io/badge/Maven-WAR-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)](https://maven.apache.org/)
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&pause=1000&color=7C83FD&center=true&vCenter=true&width=700&lines=GameZone+%E2%80%94+бронь+ПК+и+консолей+в+пару+кликов;Автоподбор+свободных+мест+для+команды;Управление+бронированиями+и+личным+кабинетом" alt="typing animation" />
-
 </div>
 
 ---
